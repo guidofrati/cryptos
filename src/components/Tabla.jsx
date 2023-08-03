@@ -24,36 +24,43 @@ function Tabla() {
   }, []);
 
   return (
-    <div className="flex justify-evenly items-center pt-10 ">
-      <table className="table-auto border border-collapse bg-negro rounded-md text-blanco">
+    <div className="flex justify-evenly items-start pt-20 ">
+      <table className="table-auto border border-collapse bg-negro rounded-md text-blanco w-1/3">
         <caption className="caption-bottom text-clarito">
-          Made by Guido :D
+          MADE BY GUIDO FRATICELLI
         </caption>
         <thead>
-          <tr>
-            <th className="border border-verde">Name</th>
-            <th className="border border-verde">24hs Change</th>
-            <th className="border border-verde">USD</th>
-            <th className="border border-verde">ARS</th>
+          <tr className="border border-verde p-2">
+            <th className="border border-verde p-2">Name</th>
+            <th className="border border-verde p-2">24hs Change</th>
+            <th className="border border-verde p-2">USD</th>
+            <th className="border border-verde p-2">ARS</th>
           </tr>
         </thead>
         {data.map((d) => (
           <tbody>
-            <tr className="border border-verde">
-              <td className="border border-verde">{d.name}</td>
-              {d.changePercent24Hr < 0 ? (
-                <td className="border border-verde text-negativo">
+            <tr>
+              <td className="border border-verde p-1">{d.name}</td>
+              {/* {d.changePercent24Hr < 0 ? (
+                <td className="border border-verde text-negativo p-1 text-center">
                   {parseFloat(d.changePercent24Hr).toFixed(2)}%
                 </td>
               ) : (
-                <td className="border border-verde text-positivo">
+                <td className=" border border-verde text-positivo p-1 text-center">
                   {parseFloat(d.changePercent24Hr).toFixed(2)}%
                 </td>
-              )}
-              <td className="border border-verde">
+              )} */}
+              <td
+                className={`border border-verde ${
+                  d.changePercent24Hr < 0 ? "text-negativo" : "text-positivo"
+                } p-1 text-center`}
+              >
+                {parseFloat(d.changePercent24Hr).toFixed(2)}%
+              </td>
+              <td className=" border border-verde p-1">
                 ${parseFloat(d.priceUsd).toFixed(2)}
               </td>
-              <td className="border border-verde">
+              <td className=" border border-verde p-1">
                 ${(parseFloat(d.priceUsd) * parseFloat(dolar)).toFixed(2)}
               </td>
             </tr>

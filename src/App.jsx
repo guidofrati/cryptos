@@ -3,7 +3,7 @@ import Tabla from "./components/Tabla";
 
 function App() {
   return (
-    <div className="bg-gris h-screen w-full font-letra">
+    <div className="bg-gris w-full font-letra">
       <NavBar />
       <Tabla />
     </div>
