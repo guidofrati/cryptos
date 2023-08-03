@@ -1,3 +1,5 @@
+import githubIcon from "../assets/icons8-github.svg";
+
 function NavBar() {
   return (
     <div className="bg-verde w-full max-h-14 flex flex-wrap items-center justify-between mx-auto p-2 fixed">
@@ -18,11 +20,7 @@ function NavBar() {
           />
         </a>
         <a href="https://github.com/guidofrati">
-          <img
-            src="src\assets\icons8-github.svg"
-            alt="github"
-            className="h-10 pr-3"
-          />
+          <img src={githubIcon} alt="github" className="h-10 pr-3" />
         </a>
       </div>
     </div>
