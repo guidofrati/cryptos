@@ -4,9 +4,6 @@ Welcome to CryptoCurrencyGF! This project allows you to view the current values 
 
 ## Table of Contents
 
-Introduction
-Features
-Usage
 
 ### Introduction
 
